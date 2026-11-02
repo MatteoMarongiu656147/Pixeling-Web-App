@@ -1,0 +1,64 @@
+/* Global palette and shared theme tokens */
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --page: #fbfaf8;
+  --surface: #ffffff;
+  --surface-soft: #f3f0eb;
+  --ink: #282621;
+  --muted: #77736e;
+  --line: #e9e5df;
+  --line-strong: #d8d2ca;
+  --accent: #f28c28;
+  --accent-dark: #d96f12;
+  --accent-soft: #fff1e1;
+  --accent-ring: rgb(242 140 40 / 28%);
+  --shadow-md: 0 12px 36px rgb(35 31 25 / 8%);
+  --shadow-lg: 0 12px 32px rgb(35 31 25 / 14%);
+
+  color: var(--ink);
+  background: var(--page);
+  font-weight: 400;
+}
+
+/* Predictable sizing and smooth document navigation */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* Establish the page canvas and remove browser spacing */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page);
+}
+
+/* Keep native controls visually consistent with the application */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+/* Let components choose link colors while retaining a clean baseline */
+a {
+  color: inherit;
+}
+

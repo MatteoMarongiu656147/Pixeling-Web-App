@@ -1,0 +1,145 @@
+/* Shared layout for create and edit pages */
+.create-content-page {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.create-content-page h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+/* Consistent vertical rhythm for content forms */
+.create-content-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.6rem;
+}
+
+.create-content-form label {
+  margin-top: 0.55rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Shared appearance and focus treatment for form fields */
+.create-content-form input,
+.create-content-form textarea,
+.create-content-form select {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.create-content-form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.create-content-form input:focus,
+.create-content-form textarea:focus,
+.create-content-form select:focus {
+  border-color: var(--accent);
+  outline: 3px solid var(--accent-ring);
+}
+
+/* Optional media preview inside create forms */
+.create-content-preview {
+  display: flex;
+  min-height: 120px;
+  max-height: 420px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: 0.9rem;
+  background: var(--surface-soft);
+}
+
+.create-content-preview img,
+.create-content-preview video {
+  display: block;
+  max-width: 100%;
+  max-height: 390px;
+  object-fit: contain;
+}
+
+/* Supporting notes and form action row */
+.form-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Keep validation feedback visible in the form instead of using browser dialogs. */
+.form-error {
+  margin: 0;
+  color: #c62828;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.create-content-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.create-content-actions button {
+  min-height: 2.75rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.75rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.primary-button {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+}
+
+.secondary-button {
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.secondary-button:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Stack form actions and tighten spacing on small screens */
+@media (max-width: 600px) {
+  .create-content-page {
+    padding-top: 1.25rem;
+  }
+
+  .create-content-actions {
+    flex-direction: column-reverse;
+  }
+
+  .create-content-actions button {
+    width: 100%;
+  }
+}
+

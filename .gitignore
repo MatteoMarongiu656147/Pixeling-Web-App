@@ -1,0 +1,29 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Firebase local cache
+.firebase/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+firebase-debug.log*
+firestore-debug.log*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo

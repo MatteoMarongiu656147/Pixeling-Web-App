@@ -107,10 +107,6 @@ const serviceWorker = self as unknown as PixelingServiceWorkerScope;
 // and it's used by the service worker to obtain Firebase Cloud Messaging services.
 const firebaseWorkerApp = initializeApp(firebaseConfig);
 
-// precacheAndRoute() is a workbox call that ensures that Workbox can serve resources directly from the cache 
-// when the browser requests them (avoids mistakes like getting them from the internet even if they are in cache).
-precacheAndRoute(self.__WB_MANIFEST);
-
 // ----------------------------------------------------------------------------------------------------------------
 
 
@@ -262,3 +258,9 @@ serviceWorker.addEventListener('fetch', (event) => {
     })()
   );
 });
+
+// ----------------------------------------------------------------------------------------------------------
+
+// precacheAndRoute() is a workbox call that ensures that Workbox can serve resources directly from the cache 
+// when the browser requests them (avoids mistakes like getting them from the internet even if they are in cache).
+precacheAndRoute(self.__WB_MANIFEST);

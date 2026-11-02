@@ -30,40 +30,31 @@ To run the project locally, you need:
 
 Follow these steps to install and run Pixeling on your local machine.
 
-1. Clone the repository on your local environment
+1. Clone the repository on your local environment (git clone [repository link])
 
 2. Copy the .env.local file in the main folder of the project (contains the VAPID key for push notifications)
 
-3. Install dependencies. Open the terminal on the main folder of the project and install all the project dependencies:
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-4. Start the development server. Run:
+4. Compile the project:
 
 ```bash
-npm run dev
-```
-
-The application will be available at the local URL displayed in the terminal (usually `http://localhost:5173`).
-PWA functionalities will not be available when executing the app like this, but it will still be possible to use it
-in the browser since it will interact with Firebase correctly.
-
-### Building and testing the PWA Locally
-
-To test the Progressive Web App (PWA) locally, run the following commands from the project directory:
-
-```bash
-npm install
 npm run build
-npm run preview
 ```
 
 The compiled application will be generated in the `dist` directory.
-You will be able to open the local URL displayed in the terminal (usually `http://localhost:4173`).
 
-This serves the production build locally and allows you to test the PWA features, such as installation, asset precaching and offline behavior, without accessing the deployed application.
+5. Run:
+
+```bash
+npm run preview
+```
+
+You will be able to open the local URL displayed in the terminal (usually `http://localhost:4173`).
 
 ## Test Accounts
 

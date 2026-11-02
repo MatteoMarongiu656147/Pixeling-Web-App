@@ -22,7 +22,7 @@ Pixeling can be installed as a Progressive Web App through the browser's page se
 
 To run the project locally, you need:
 
-- [Node.js](https://nodejs.org/) (including npm).
+- [Node.js](https://nodejs.org/) (including npm). Node.js 24.12.0 or higher is recommended to avoid warnings when installing.
 - Any web browser.
 - The Firebase configuration required by the application is already provided in the source files.
 
